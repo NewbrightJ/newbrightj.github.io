@@ -1,98 +1,82 @@
 [
   {
     "Geographic Area": "Ohio - Congressional District 1 (113th Congress)",
-    "Bachelor's Percent": 30.1,
     "High School": 87.9,
-    "Advanced Education": 11.1
+    "Bachelor's": 30.1
   },
   {
     "Geographic Area": "Ohio - Congressional District 2 (113th Congress)",
-    "Bachelor's Percent": 28.4,
     "High School": 87.1,
-    "Advanced Education": 11
+    "Bachelor's": 28.4
   },
   {
     "Geographic Area": "Ohio - Congressional District 3 (113th Congress)",
-    "Bachelor's Percent": 25.5,
     "High School": 85.9,
-    "Advanced Education": 8
+    "Bachelor's": 25.5
   },
   {
     "Geographic Area": "Ohio - Congressional District 4 (113th Congress)",
-    "Bachelor's Percent": 15.8,
     "High School": 88.1,
-    "Advanced Education": 5.8
+    "Bachelor's": 15.8
   },
   {
     "Geographic Area": "Ohio - Congressional District 5 (113th Congress)",
-    "Bachelor's Percent": 23.4,
     "High School": 91,
-    "Advanced Education": 8.7
+    "Bachelor's": 23.4
   },
   {
     "Geographic Area": "Ohio - Congressional District 6 (113th Congress)",
-    "Bachelor's Percent": 14.3,
     "High School": 86,
-    "Advanced Education": 4.9
+    "Bachelor's": 14.3
   },
   {
     "Geographic Area": "Ohio - Congressional District 7 (113th Congress)",
-    "Bachelor's Percent": 18,
     "High School": 86.3,
-    "Advanced Education": 6.1
+    "Bachelor's": 18
   },
   {
     "Geographic Area": "Ohio - Congressional District 8 (113th Congress)",
-    "Bachelor's Percent": 21.6,
     "High School": 87.7,
-    "Advanced Education": 7.7
+    "Bachelor's": 21.6
   },
   {
     "Geographic Area": "Ohio - Congressional District 9 (113th Congress)",
-    "Bachelor's Percent": 20,
     "High School": 85.5,
-    "Advanced Education": 6.9
+    "Bachelor's": 20
   },
   {
     "Geographic Area": "Ohio - Congressional District 10 (113th Congress)",
-    "Bachelor's Percent": 26.4,
     "High School": 88.8,
-    "Advanced Education": 11
+    "Bachelor's": 26.4
   },
   {
     "Geographic Area": "Ohio - Congressional District 11 (113th Congress)",
-    "Bachelor's Percent": 25.1,
     "High School": 83.8,
-    "Advanced Education": 11
+    "Bachelor's": 25.1
   },
   {
     "Geographic Area": "Ohio - Congressional District 12 (113th Congress)",
-    "Bachelor's Percent": 37.3,
     "High School": 92,
-    "Advanced Education": 13.7
+    "Bachelor's": 37.3
   },
   {
     "Geographic Area": "Ohio - Congressional District 13 (113th Congress)",
-    "Bachelor's Percent": 20,
     "High School": 87.9,
-    "Advanced Education": 6.7
+    "Bachelor's": 20
   },
   {
     "Geographic Area": "Ohio - Congressional District 14 (113th Congress)",
-    "Bachelor's Percent": 31.4,
     "High School": 91.1,
-    "Advanced Education": 11.7
+    "Bachelor's": 31.4
   },
   {
     "Geographic Area": "Ohio - Congressional District 15 (113th Congress)",
-    "Bachelor's Percent": 27.9,
     "High School": 89.5,
-    "Advanced Education": 10.4
+    "Bachelor's": 27.9
   },
   {
     "Geographic Area": "Ohio - Congressional District 16 (113th Congress)",
-    "Bachelor's Percent": 30.7,
     "High School": 92.1,
-    "Advanced Education": 10.7
+    "Bachelor's": 30.7
   }
 ]
