@@ -10,6 +10,7 @@
     <!-- Scripts -->
     <script src="plotly-latest.min.js"></script>
     <script src="leaflet.js"></script>
+    <script src="education2000.js"></script>
 
 </head>
 
@@ -206,9 +207,11 @@
     <script>
         TESTER = document.getElementById('TESTER');
         Plotly.plot( TESTER, [{
-        x: [1, 2, 3, 4, 5],
-        y: [1, 2, 4, 8, 16] }], {
+        x: ['High School', 'Bachelor\'s Degree'],
+        y: [] }], {
         margin: { t: 0 } } );
+
+        console.log(education2000);
 
         /*att0 = document.getElementById('att0');
         Plotly.plot(att0,
