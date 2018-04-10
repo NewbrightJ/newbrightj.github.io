@@ -51,7 +51,7 @@
     font-size: 1em;
 }
 
-.dem {
+.Dem {
     stroke: #000000;
     stroke-width: .08%;
     fill: #0000ff;
@@ -60,7 +60,7 @@
     stroke-linejoin:round;
 }
 
-.rep {
+.Rep {
     stroke: #000000;
     stroke-width: .08%;
     fill: #ff0000;
