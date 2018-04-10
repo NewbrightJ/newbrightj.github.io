@@ -50,3 +50,21 @@
     color: rgba(10, 110, 240, 1);
     font-size: 1em;
 }
+
+.dem {
+    stroke: #000000;
+    stroke-width: .08%;
+    fill: #0000ff;
+    stroke-linecap:butt;
+    stroke-miterlimit:2;
+    stroke-linejoin:round;
+}
+
+.rep {
+    stroke: #000000;
+    stroke-width: .08%;
+    fill: #ff0000;
+    stroke-linecap:butt;
+    stroke-miterlimit:2;
+    stroke-linejoin:round;
+}
