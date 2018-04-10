@@ -1,5 +1,4 @@
-var education2000 = {
-  "district" : [
+var education2000 = [
     {
       "Geographical Area": "Congressional District 1 (110th Congress)",
       "high school": 80.1,
@@ -90,5 +89,4 @@ var education2000 = {
       "high school": 77.5,
       "bachelor's": 11.3
     }
-  ]
-}
+  ];
