@@ -201,13 +201,19 @@
 
     </div>
 
-    <div id="att0" style="height:400px;width:50%">
+    <div id="TESTER" style="height:400px;width:50%">
 
     </div>
 
 
     <script>
-        att0 = document.getElementById('att0');
+        TESTER = document.getElementById('tester');
+        Plotly.plot( TESTER, [{
+        x: [1, 2, 3, 4, 5],
+        y: [1, 2, 4, 8, 16] }], {
+        margin: { t: 0 } } );
+
+        /*att0 = document.getElementById('att0');
         Plotly.plot(att0,
             [{
                 x: ['white', 'black', 'asian', 'other', 'two or more'],
@@ -215,10 +221,10 @@
             }], {
                 margin: { t: 0 }
             }
-        );
+        );*/
 
         /* Current plot.ly.js version */
-        console.log(Plotly.BUILD);
+        //console.log(Plotly.BUILD); 
 
     </script>
 </body>
