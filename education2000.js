@@ -1,4 +1,4 @@
-var education2012 = {
+var education2000 = {
   "district" : [
     {
       "Geographical Area": "Congressional District 1 (110th Congress)",
