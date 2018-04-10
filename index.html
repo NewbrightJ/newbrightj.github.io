@@ -208,10 +208,12 @@
         TESTER = document.getElementById('TESTER');
         Plotly.plot( TESTER, [{
         x: ['High School', 'Bachelor\'s Degree'],
-        y: [] }], {
-        margin: { t: 0 } } );
+        y: [education2000[0].high_school, education2000[0].bachelors], 
+            type: 'bar'
+        }], {
+        margin: { t: 0 } } )
 
-        console.log(education2000);
+        console.log(education2000[0].high_school);
 
         /*att0 = document.getElementById('att0');
         Plotly.plot(att0,
