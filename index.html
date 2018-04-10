@@ -31,8 +31,7 @@
 
     <div id="mapContainer" style="height:600px;width:100%">
         <div id="mapid1" style="height:500px;width:50%;float:left">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="38.5 -84.5 5.0 5.0" version="1.1" onmouseup="handleMouseUp(evt)" onmousedown="handleMouseDown(evt)" onmousemove="handleMouseMove(evt)">
-                <script xlink:href="SVGPan.js"></script>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="38.5 -84.5 5.0 5.0" version="1.1">
 
                 <g id="viewport" transform="matrix(1 0 0 1 0 0)">
                     <g id="map-matrix" transform="rotate(-90,40.5539415,-82.858231)">
@@ -120,9 +119,7 @@
         </div>
 
         <div id="mapid2" style="height:500px;width:50%;float:right">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="38.5 -84.65 5.0 5.0" version="1.1"
-                onmouseup="handleMouseUp(evt)" onmousedown="handleMouseDown(evt)" onmousemove="handleMouseMove(evt)">
-                <script xlink:href="SVGPan.js"></script>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="38.5 -84.65 5.0 5.0" version="1.1">
                 <g id="viewport" transform="matrix(1 0 0 1 0 0)">
                     <g id="map-matrix" transform="rotate(-90,40.553935,-83.0329985)">
                         <path id="att0" class="Rep"
@@ -207,7 +204,7 @@
 
 
     <script>
-        TESTER = document.getElementById('tester');
+        TESTER = document.getElementById('TESTER');
         Plotly.plot( TESTER, [{
         x: [1, 2, 3, 4, 5],
         y: [1, 2, 4, 8, 16] }], {
