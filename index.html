@@ -2,7 +2,9 @@
 <html>
 
 <head>
+    
     <title>Ohio's Changing Congressional Districts</title>
+    <script src="plotly-latest.min.js"></script>
 
     <style>
         #headerDiv {
@@ -317,7 +319,18 @@
   }).addTo(mymap2);
 </script>
 -->
+ <script>
+att0 = document.getElementById('att0');
+	Plotly.plot( att0, [{
+        x: ['white', 'black', 'asian', 'other', 'two or more'],
+        y: [1, 2, 3, 4, 5] }], {
+        margin: { t:0 } } );
 
+    /* Current plot.ly.js version */
+    console.log( Plotly.BUILD );
+    
+        
+ </script>
 </body>
 
 </html>
