@@ -11,8 +11,9 @@
     <script src="plotly-latest.min.js"></script>
     <script src="leaflet.js"></script>
     <script src="jquery.min.js"></script>
-    <script src="education2000.js"></script>
+    <script src="education2005.js"></script>
     <script src="education2013.js"></script>
+    <script src="Race2005.js"></script>
     <script src="Race2013.js"></script>
 
 </head>
@@ -227,7 +228,7 @@
         // Initially make Education Graph 1 using District 1
         var trace1 = {
             x: ['High School', 'Bachelor\'s Degree'],
-            y: [education2000[0].high_school, education2000[0].bachelors], 
+            y: [education2005[0].high_school, education2005[0].bachelors], 
             type: 'bar',
             marker:{
                 color: ['rgba(80, 185, 41, 1)', 'rgba(246,150,54,1)']
@@ -237,12 +238,32 @@
         var data = [trace1];
 
         var layout = {
-            title: education2000[0].Geographical_Area,
+            title: education2005[0].Geographical_Area,
             showlegend: false,
             yaxis: {range: [0, 100]}
         };
 
         Plotly.newPlot('EducationGraph1', data, layout, {displayModeBar: false});
+
+        // Initially make Race Graph 1 using District 1 
+        var trace2 = {
+            x: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
+            y: [race2005[0].White_Percent, race2005[0].Black_Percent, race2005[0].Asian_Percent, race2005[0].Two_More_Percent, race2005[0].Other_Percent], 
+            type: 'bar',
+            marker:{
+                color: ['rgba(80, 185, 41, 1)', 'rgba(246,150,54,1)']
+            }
+        }
+
+        var data = [trace2];
+
+        var layout = {
+            title: race2005[0].Geographical_Area,
+            showlegend: false,
+            yaxis: {range: [0, 100]}
+        };
+
+        Plotly.newPlot('RaceGraph1', data, layout, {displayModeBar: false});
         
         // Initially make Education Graph 2 using District 1
         var trace3 = {
@@ -266,7 +287,7 @@
 
         // Initially make Race Graph 2 using District 1 
         var trace4 = {
-            x: ['White', 'Black', 'Asian', 'Two or More Races', 'Other'],
+            x: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
             y: [race2013[0].White_Percent, race2013[0].Black_Percent, race2013[0].Asian_Percent, race2013[0].Two_More_Percent, race2013[0].Other_Percent], 
             type: 'bar',
             marker:{
@@ -297,7 +318,7 @@
                     // Redraw Education graph 1
                     var trace1 = {
                         x: ['High School', 'Bachelor\'s Degree'],
-                        y: [education2000[$(this).attr('id')].high_school, education2000[$(this).attr('id')].bachelors], 
+                        y: [education2005[$(this).attr('id')].high_school, education2005[$(this).attr('id')].bachelors], 
                         type: 'bar',
                         marker:{
                             color: ['rgba(80, 185, 41, 1)', 'rgba(246,150,54,1)']
@@ -307,12 +328,32 @@
                     var data = [trace1];
 
                     var layout = {
-                        title: education2000[$(this).attr('id')].Geographical_Area,
+                        title: education2005[$(this).attr('id')].Geographical_Area,
                         showlegend: false,
                         yaxis: {range: [0, 100]}
                     };
 
                     Plotly.newPlot('EducationGraph1', data, layout, {displayModeBar: false});
+
+                    // Redraw Race graph 1
+                    var trace2 = {
+                        x: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
+                        y: [race2005[$(this).attr('id')].White_Percent, race2005[$(this).attr('id')].Black_Percent, race2005[$(this).attr('id')].Asian_Percent, race2005[$(this).attr('id')].Two_More_Percent, race2005[$(this).attr('id')].Other_Percent], 
+                        type: 'bar',
+                        marker:{
+                            color: ['rgba(80, 185, 41, 1)', 'rgba(246,150,54,1)']
+                        }
+                    }
+
+                    var data = [trace2];
+
+                    var layout = {
+                        title: race2005[$(this).attr('id')].Geographical_Area,
+                        showlegend: false,
+                        yaxis: {range: [0, 100]}
+                    };
+
+                    Plotly.newPlot('RaceGraph1', data, layout, {displayModeBar: false});
                 }
                 // If right map is clicked 
                 if($(this).attr('svgtext')=='2') {
@@ -338,7 +379,7 @@
                     
                     // Redraw Race graph 2
                     var trace4 = {
-                        x: ['White', 'Black', 'Asian', 'Two or More Races', 'Other'],
+                        x: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
                         y: [race2013[$(this).attr('id')].White_Percent, race2013[$(this).attr('id')].Black_Percent, race2013[$(this).attr('id')].Asian_Percent, race2013[$(this).attr('id')].Two_More_Percent, race2013[$(this).attr('id')].Other_Percent], 
                         type: 'bar',
                         marker:{
@@ -363,7 +404,13 @@
 
             $('#Filter1').change(function () {
                 var Filter1 = $(this).val();
-                //console.log(Filter1);
+                if(Filter1=='race'){
+                    $('#EducationGraph1').hide();
+                    $('#RaceGraph1').show();
+                }else{
+                    $('#EducationGraph1').show();
+                    $('#RaceGraph1').hide();
+                }
             });
 
             // Will trigger when the value of the dropdown changes
