@@ -13,6 +13,7 @@
     <script src="jquery.min.js"></script>
     <script src="education2000.js"></script>
     <script src="education2013.js"></script>
+    <script src="Race2013.js"></script>
 
 </head>
 
@@ -201,12 +202,26 @@
 
     </div>
 
-    <div id="graph1" style="height:400px;width:50%;float: left;"></div>
-    <div id="graph2" style="height:400px;width:50%;float: right"></div>
-
+    <div style="width:50%;float: left;">
+        <div><strong>Select a filter:</strong></div>
+        <select id="filter1">
+            <option value="education">Education</option>
+            <option value="race">Race</option>
+        </select>
+        <div id="educationgraph1" style="height:400px;"></div>
+    </div>
+    <div style="width:50%;float: right;">
+        <div><strong>Select a filter:</strong></div>
+        <select id="filter2">
+            <option value="education">Education</option>
+            <option value="race">Race</option>
+        </select>
+        <div id="educationgraph2" style="height:400px;"></div>
+        <div id="racegraph2" style="height:400px;display: none"></div>
+    </div>
 
     <script>
-        // Graph 1
+        // Education Graph 1
         var trace1 = {
             x: ['High School', 'Bachelor\'s Degree'],
             y: [education2000[0].high_school, education2000[0].bachelors], 
@@ -224,10 +239,10 @@
             yaxis: {range: [0, 100]}
         };
 
-        Plotly.newPlot('graph1', data, layout, {displayModeBar: false});
+        Plotly.newPlot('educationgraph1', data, layout, {displayModeBar: false});
         
-        // Graph 2
-        var trace2 = {
+        // Education Graph 2
+        var trace3 = {
             x: ['High School', 'Bachelor\'s Degree'],
             y: [education2013[0].high_school, education2013[0].bachelors], 
             type: 'bar',
@@ -236,7 +251,7 @@
             }
         }
 
-        var data = [trace2];
+        var data = [trace3];
 
         var layout = {
             title: 'Education',
@@ -244,7 +259,27 @@
             yaxis: {range: [0, 100]}
         };
 
-        Plotly.newPlot('graph2', data, layout, {displayModeBar: false});
+        Plotly.newPlot('educationgraph2', data, layout, {displayModeBar: false});
+
+        // Race Graph 2
+        var trace4 = {
+            x: ['White', 'Black', 'Asian', 'Two or More Races', 'Other'],
+            y: [race2013[0].White_Percent, race2013[0].Black_Percent, race2013[0].Asian_Percent, race2013[0].Two_More_Percent, race2013[0].Other_Percent], 
+            type: 'bar',
+            marker:{
+                color: ['rgba(80, 185, 41, 1)', 'rgba(246,150,54,1)']
+            }
+        }
+
+        var data = [trace4];
+
+        var layout = {
+            title: 'Race',
+            showlegend: false,
+            yaxis: {range: [0, 100]}
+        };
+
+        Plotly.newPlot('racegraph2', data, layout, {displayModeBar: false});
 
         //console.log(education2000[0].high_school);
 
@@ -252,6 +287,7 @@
     <script>
         $(document).ready(function () {
             $('path').click(function () {
+                
                 if($(this).attr('svgtext')=='1'){
                     var trace1 = {
                         x: ['High School', 'Bachelor\'s Degree'],
@@ -270,11 +306,11 @@
                         yaxis: {range: [0, 100]}
                     };
 
-                    Plotly.newPlot('graph1', data, layout, {displayModeBar: false});
+                    Plotly.newPlot('educationgraph1', data, layout, {displayModeBar: false});
                 }
                 
                 if($(this).attr('svgtext')=='2') {
-                    var trace1 = {
+                    var trace3 = {
                         x: ['High School', 'Bachelor\'s Degree'],
                         y: [education2013[$(this).attr('id')].high_school, education2013[$(this).attr('id')].bachelors], 
                         type: 'bar',
@@ -283,7 +319,7 @@
                         }
                     }
 
-                    var data = [trace1];
+                    var data = [trace3];
 
                     var layout = {
                         title: education2013[$(this).attr('id')].Geographical_Area,
@@ -291,11 +327,47 @@
                         yaxis: {range: [0, 100]}
                     };
 
-                    Plotly.newPlot('graph2', data, layout, {displayModeBar: false});
+                    Plotly.newPlot('educationgraph2', data, layout, {displayModeBar: false});
+
+                    var trace4 = {
+                        x: ['White', 'Black', 'Asian', 'Two or More Races', 'Other'],
+                        y: [race2013[$(this).attr('id')].White_Percent, race2013[$(this).attr('id')].Black_Percent, race2013[$(this).attr('id')].Asian_Percent, race2013[$(this).attr('id')].Two_More_Percent, race2013[$(this).attr('id')].Other_Percent], 
+                        type: 'bar',
+                        marker:{
+                            color: ['rgba(80, 185, 41, 1)', 'rgba(246,150,54,1)']
+                        }
+                    }
+
+                    var data = [trace4];
+
+                    var layout = {
+                        title: race2013[$(this).attr('id')].Geographical_Area,
+                        showlegend: false,
+                        yaxis: {range: [0, 100]}
+                    };
+
+                    Plotly.newPlot('racegraph2', data, layout, {displayModeBar: false});
                 }
                 
-                console.log($(this).attr('id'));
-                console.log($(this).attr('svgtext'));
+                //console.log($(this).attr('id'));
+                //console.log($(this).attr('svgtext'));
+            });
+
+            $('#filter1').change(function () {
+                var filter1 = $(this).val();
+                //console.log(filter1);
+            });
+
+            $('#filter2').change(function () {
+                var filter2 = $(this).val();
+                if(filter2=='race'){
+                    $('#educationgraph2').hide();
+                    $('#racegraph2').show();
+                }else{
+                    $('#educationgraph2').show();
+                    $('#racegraph2').hide();
+                }
+                //console.log(filter2);
             });
         });
     </script>
