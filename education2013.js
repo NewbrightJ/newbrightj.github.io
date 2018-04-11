@@ -1,4 +1,4 @@
-[
+var education2013 = [
   {
     "Geographic Area": "Ohio - Congressional District 1 (113th Congress)",
     "High School": 87.9,
@@ -79,4 +79,4 @@
     "High School": 92.1,
     "Bachelor's": 30.7
   }
-]
+];
