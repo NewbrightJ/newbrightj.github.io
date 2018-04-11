@@ -210,7 +210,7 @@
             <option value="education">Education</option>
             <option value="race">Race</option>
         </select>
-        <div id="EducationGraph1" style="height:400px;"></div>
+        <div id="EducationGraph1" style="height:400px;width:400px;margin: 0 auto;"></div>
         <div id="RaceGraph1" style="height:400px;display: none"></div>
     </div>
     <div style="width:50%;float: right;">
@@ -221,7 +221,7 @@
             <option value="education">Education</option>
             <option value="race">Race</option>
         </select>
-        <div id="EducationGraph2" style="height:400px;"></div>
+        <div id="EducationGraph2" style="height:400px;width:400px;margin: 0 auto;"></div>
         <div id="RaceGraph2" style="height:400px;display: none"></div>
     </div>
 
@@ -248,20 +248,21 @@
 
         // Initially make Race Graph 1 using District 1 
         var trace2 = {
-            x: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
-            y: [race2005[0].White_Percent, race2005[0].Black_Percent, race2005[0].Asian_Percent, race2005[0].Two_More_Percent, race2005[0].Other_Percent],
-            type: 'bar',
+            labels: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
+            values: [race2005[0].White_Percent, race2005[0].Black_Percent, race2005[0].Asian_Percent, race2005[0].Two_More_Percent, race2005[0].Other_Percent],
+            type: 'pie',
             marker: {
                 color: ['rgba(80, 185, 41, 1)', 'rgba(246,150,54,1)']
-            }
+            },
+            hoverinfo: 'label+percent',
+            rotation: 90
         }
 
         var data = [trace2];
 
         var layout = {
             title: race2005[0].Geographical_Area,
-            showlegend: false,
-            yaxis: { range: [0, 100] }
+            showlegend: true
         };
 
         Plotly.newPlot('RaceGraph1', data, layout, { displayModeBar: false });
@@ -288,20 +289,21 @@
 
         // Initially make Race Graph 2 using District 1 
         var trace4 = {
-            x: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
-            y: [race2013[0].White_Percent, race2013[0].Black_Percent, race2013[0].Asian_Percent, race2013[0].Two_More_Percent, race2013[0].Other_Percent],
-            type: 'bar',
+            labels: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
+            values: [race2013[0].White_Percent, race2013[0].Black_Percent, race2013[0].Asian_Percent, race2013[0].Two_More_Percent, race2013[0].Other_Percent],
+            type: 'pie',
             marker: {
                 color: ['rgba(80, 185, 41, 1)', 'rgba(246,150,54,1)']
-            }
+            },
+            hoverinfo: 'label+percent',
+            rotation: 90
         }
 
         var data = [trace4];
 
         var layout = {
             title: race2013[0].Geographical_Area,
-            showlegend: false,
-            yaxis: { range: [0, 100] }
+            showlegend: true
         };
 
         Plotly.newPlot('RaceGraph2', data, layout, { displayModeBar: false });
@@ -338,20 +340,21 @@
 
                     // Redraw Race graph 1
                     var trace2 = {
-                        x: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
-                        y: [race2005[$(this).attr('id')].White_Percent, race2005[$(this).attr('id')].Black_Percent, race2005[$(this).attr('id')].Asian_Percent, race2005[$(this).attr('id')].Two_More_Percent, race2005[$(this).attr('id')].Other_Percent],
-                        type: 'bar',
+                        labels: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
+                        values: [race2005[$(this).attr('id')].White_Percent, race2005[$(this).attr('id')].Black_Percent, race2005[$(this).attr('id')].Asian_Percent, race2005[$(this).attr('id')].Two_More_Percent, race2005[$(this).attr('id')].Other_Percent],
+                        type: 'pie',
                         marker: {
                             color: ['rgba(80, 185, 41, 1)', 'rgba(246,150,54,1)']
-                        }
+                        },
+                        hoverinfo: 'label+percent',
+                        rotation: 90
                     }
 
                     var data = [trace2];
 
                     var layout = {
                         title: race2005[$(this).attr('id')].Geographical_Area,
-                        showlegend: false,
-                        yaxis: { range: [0, 100] }
+                        showlegend: true
                     };
 
                     Plotly.newPlot('RaceGraph1', data, layout, { displayModeBar: false });
@@ -380,20 +383,21 @@
 
                     // Redraw Race graph 2
                     var trace4 = {
-                        x: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
-                        y: [race2013[$(this).attr('id')].White_Percent, race2013[$(this).attr('id')].Black_Percent, race2013[$(this).attr('id')].Asian_Percent, race2013[$(this).attr('id')].Two_More_Percent, race2013[$(this).attr('id')].Other_Percent],
-                        type: 'bar',
+                        labels: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
+                        values: [race2013[$(this).attr('id')].White_Percent, race2013[$(this).attr('id')].Black_Percent, race2013[$(this).attr('id')].Asian_Percent, race2013[$(this).attr('id')].Two_More_Percent, race2013[$(this).attr('id')].Other_Percent],
+                        type: 'pie',
                         marker: {
                             color: ['rgba(80, 185, 41, 1)', 'rgba(246,150,54,1)']
-                        }
+                        },
+                        hoverinfo: 'label+percent',
+                        rotation: 90
                     }
 
                     var data = [trace4];
 
                     var layout = {
                         title: race2013[$(this).attr('id')].Geographical_Area,
-                        showlegend: false,
-                        yaxis: { range: [0, 100] }
+                        showlegend: true
                     };
 
                     Plotly.newPlot('RaceGraph2', data, layout, { displayModeBar: false });
