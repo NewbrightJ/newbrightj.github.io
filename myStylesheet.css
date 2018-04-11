@@ -68,3 +68,7 @@
     stroke-miterlimit:2;
     stroke-linejoin:round;
 }
+
+.hover {
+    opacity: 0.5;
+}

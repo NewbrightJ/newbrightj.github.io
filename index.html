@@ -430,6 +430,30 @@
                     $('#RaceGraph2').hide();
                 }
             });
+
+            $('path').hover(
+                function() {
+                    var pathID = $(this).attr('id');
+                    var svgText = $(this).attr('svgtext');
+                    var otherPath;
+                    if(svgText=='1'){
+                        otherPath = $("path[id="+pathID+"][svgtext='2']");
+                    }else{
+                        otherPath = $("path[id="+pathID+"][svgtext='1']");
+                    }
+                    $( otherPath ).addClass( "hover" );
+                }, function() {
+                    var pathID = $(this).attr('id');
+                    var svgText = $(this).attr('svgtext');
+                    var otherPath;
+                    if(svgText=='1'){
+                        otherPath = $("path[id="+pathID+"][svgtext='2']");
+                    }else{
+                        otherPath = $("path[id="+pathID+"][svgtext='1']");
+                    }
+                    $( otherPath ).removeClass( "hover" );
+                }
+            );
         });
     </script>
 </body>
