@@ -29,10 +29,11 @@
     </div>
 
     <div id="wrapper">
-        <div id="titleLeft">Congressional Boundaries 2000 (106th Congress)</div>
-        <div id="titleRight">Congressional Boundaries 2012 (113th Congress)</div>
+        <div id="titleLeft">Congressional Boundaries 2005 (109th Congress)</div>
+        <div id="titleRight">Congressional Boundaries 2013 (113th Congress)</div>
     </div>
 
+    <!-- Container for both maps -->
     <div id="mapContainer" style="height:600px;width:100%">
         <div id="mapid1" style="height:500px;width:50%;float:left">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="38.5 -84.5 5.0 5.0" version="1.1">
@@ -202,27 +203,28 @@
 
     </div>
 
+    <!-- Container for filter dropdowns and graphs -->
     <div style="width:50%;float: left;">
         <div><strong>Select a filter:</strong></div>
-        <select id="filter1">
+        <select id="Filter1">
             <option value="education">Education</option>
             <option value="race">Race</option>
         </select>
-        <div id="educationgraph1" style="height:400px;"></div>
-        <div id="racegraph1" style="height:400px;display: none"></div>
+        <div id="EducationGraph1" style="height:400px;"></div>
+        <div id="RaceGraph1" style="height:400px;display: none"></div>
     </div>
     <div style="width:50%;float: right;">
         <div><strong>Select a filter:</strong></div>
-        <select id="filter2">
+        <select id="Filter2">
             <option value="education">Education</option>
             <option value="race">Race</option>
         </select>
-        <div id="educationgraph2" style="height:400px;"></div>
-        <div id="racegraph2" style="height:400px;display: none"></div>
+        <div id="EducationGraph2" style="height:400px;"></div>
+        <div id="RaceGraph2" style="height:400px;display: none"></div>
     </div>
 
     <script>
-        // Education Graph 1
+        // Initially make Education Graph 1 using District 1
         var trace1 = {
             x: ['High School', 'Bachelor\'s Degree'],
             y: [education2000[0].high_school, education2000[0].bachelors], 
@@ -235,14 +237,14 @@
         var data = [trace1];
 
         var layout = {
-            title: 'Education',
+            title: education2000[0].Geographical_Area,
             showlegend: false,
             yaxis: {range: [0, 100]}
         };
 
-        Plotly.newPlot('educationgraph1', data, layout, {displayModeBar: false});
+        Plotly.newPlot('EducationGraph1', data, layout, {displayModeBar: false});
         
-        // Education Graph 2
+        // Initially make Education Graph 2 using District 1
         var trace3 = {
             x: ['High School', 'Bachelor\'s Degree'],
             y: [education2013[0].high_school, education2013[0].bachelors], 
@@ -255,14 +257,14 @@
         var data = [trace3];
 
         var layout = {
-            title: 'Education',
+            title: education2013[0].Geographical_Area,
             showlegend: false,
             yaxis: {range: [0, 100]}
         };
 
-        Plotly.newPlot('educationgraph2', data, layout, {displayModeBar: false});
+        Plotly.newPlot('EducationGraph2', data, layout, {displayModeBar: false});
 
-        // Race Graph 2
+        // Initially make Race Graph 2 using District 1 
         var trace4 = {
             x: ['White', 'Black', 'Asian', 'Two or More Races', 'Other'],
             y: [race2013[0].White_Percent, race2013[0].Black_Percent, race2013[0].Asian_Percent, race2013[0].Two_More_Percent, race2013[0].Other_Percent], 
@@ -275,21 +277,24 @@
         var data = [trace4];
 
         var layout = {
-            title: 'Race',
+            title: race2013[0].Geographical_Area,
             showlegend: false,
             yaxis: {range: [0, 100]}
         };
 
-        Plotly.newPlot('racegraph2', data, layout, {displayModeBar: false});
-
-        //console.log(education2000[0].high_school);
+        Plotly.newPlot('RaceGraph2', data, layout, {displayModeBar: false});
 
     </script>
     <script>
+        // This function will call when a district is clicked on the map.
+        // Depending on which map is clicked, the graphs will update based on the
+        // ID of the path element. Both the education and race graphs will update
+        // each time a new district is clicked, the filter only shows the selected.
         $(document).ready(function () {
             $('path').click(function () {
-                
+                // If left map is clicked
                 if($(this).attr('svgtext')=='1'){
+                    // Redraw Education graph 1
                     var trace1 = {
                         x: ['High School', 'Bachelor\'s Degree'],
                         y: [education2000[$(this).attr('id')].high_school, education2000[$(this).attr('id')].bachelors], 
@@ -307,10 +312,11 @@
                         yaxis: {range: [0, 100]}
                     };
 
-                    Plotly.newPlot('educationgraph1', data, layout, {displayModeBar: false});
+                    Plotly.newPlot('EducationGraph1', data, layout, {displayModeBar: false});
                 }
-                
+                // If right map is clicked 
                 if($(this).attr('svgtext')=='2') {
+                    // Redraw Education graph 2
                     var trace3 = {
                         x: ['High School', 'Bachelor\'s Degree'],
                         y: [education2013[$(this).attr('id')].high_school, education2013[$(this).attr('id')].bachelors], 
@@ -328,8 +334,9 @@
                         yaxis: {range: [0, 100]}
                     };
 
-                    Plotly.newPlot('educationgraph2', data, layout, {displayModeBar: false});
-
+                    Plotly.newPlot('EducationGraph2', data, layout, {displayModeBar: false});
+                    
+                    // Redraw Race graph 2
                     var trace4 = {
                         x: ['White', 'Black', 'Asian', 'Two or More Races', 'Other'],
                         y: [race2013[$(this).attr('id')].White_Percent, race2013[$(this).attr('id')].Black_Percent, race2013[$(this).attr('id')].Asian_Percent, race2013[$(this).attr('id')].Two_More_Percent, race2013[$(this).attr('id')].Other_Percent], 
@@ -347,28 +354,29 @@
                         yaxis: {range: [0, 100]}
                     };
 
-                    Plotly.newPlot('racegraph2', data, layout, {displayModeBar: false});
+                    Plotly.newPlot('RaceGraph2', data, layout, {displayModeBar: false});
                 }
                 
                 //console.log($(this).attr('id'));
                 //console.log($(this).attr('svgtext'));
             });
 
-            $('#filter1').change(function () {
-                var filter1 = $(this).val();
-                //console.log(filter1);
+            $('#Filter1').change(function () {
+                var Filter1 = $(this).val();
+                //console.log(Filter1);
             });
 
-            $('#filter2').change(function () {
-                var filter2 = $(this).val();
-                if(filter2=='race'){
-                    $('#educationgraph2').hide();
-                    $('#racegraph2').show();
+            // Will trigger when the value of the dropdown changes
+            // The active graph will show and the other will be hidden. 
+            $('#Filter2').change(function () {
+                var Filter2 = $(this).val();
+                if(Filter2=='race'){
+                    $('#EducationGraph2').hide();
+                    $('#RaceGraph2').show();
                 }else{
-                    $('#educationgraph2').show();
-                    $('#racegraph2').hide();
+                    $('#EducationGraph2').show();
+                    $('#RaceGraph2').hide();
                 }
-                //console.log(filter2);
             });
         });
     </script>
