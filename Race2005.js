@@ -1,4 +1,4 @@
-[
+var race2005 = [
   {
     "Geography": "Congressional District 1 (109th Congress), Ohio",
     "White": 67.3,
@@ -143,4 +143,4 @@
     "Some other race": 0.5,
     "Two or more": 1
   }
-]
+];
