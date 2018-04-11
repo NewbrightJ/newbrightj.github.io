@@ -1,4 +1,4 @@
-[
+var race2013 = [
   {
     "Geographic Area": "Ohio - Congressional District 1 (113th Congress)",
     "Asian_Percent": 2.6,
@@ -127,4 +127,4 @@
     "Two_More_Percent": 1.3,
     "White_Percent": 94.3
   }
-]
+];
