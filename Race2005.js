@@ -1,146 +1,146 @@
 var race2005 = [
   {
-    "Geography": "Congressional District 1 (109th Congress), Ohio",
-    "White": 67.3,
-    "African American": 28.4,
-    "Asian": 1.6,
-    "Some other race": 0.9,
-    "Two or more": 1.8
+    "Geographical_Area": "Congressional District 1 (109th Congress)",
+    "White_Percent": 67.3,
+    "Black_Percent": 28.4,
+    "Asian_Percent": 1.6,
+    "Other_Percent": 0.9,
+    "Two_More_Percent": 1.8
   },
   {
-    "Geography": "Congressional District 2 (109th Congress), Ohio",
-    "White": 91.7,
-    "African American": 4.9,
-    "Asian": 1.7,
-    "Some other race": 0.5,
-    "Two or more": 1.2
+    "Geographical_Area": "Congressional District 2 (109th Congress)",
+    "White_Percent": 91.7,
+    "Black_Percent": 4.9,
+    "Asian_Percent": 1.7,
+    "Other_Percent": 0.5,
+    "Two_More_Percent": 1.2
   },
   {
-    "Geography": "Congressional District 3 (109th Congress), Ohio",
-    "White": 80,
-    "African American": 16.5,
-    "Asian": 1.6,
-    "Some other race": 0.7,
-    "Two or more": 1.2
+    "Geographical_Area": "Congressional District 3 (109th Congress)",
+    "White_Percent": 80,
+    "Black_Percent": 16.5,
+    "Asian_Percent": 1.6,
+    "Other_Percent": 0.7,
+    "Two_More_Percent": 1.2
   },
   {
-    "Geography": "Congressional District 4 (109th Congress), Ohio",
-    "White": 92.9,
-    "African American": 3.6,
-    "Asian": 0.5,
-    "Some other race": 1.3,
-    "Two or more": 1.7
+    "Geographical_Area": "Congressional District 4 (109th Congress)",
+    "White_Percent": 92.9,
+    "Black_Percent": 3.6,
+    "Asian_Percent": 0.5,
+    "Other_Percent": 1.3,
+    "Two_More_Percent": 1.7
   },
   {
-    "Geography": "Congressional District 5 (109th Congress), Ohio",
-    "White": 95.5,
-    "African American": 1,
-    "Asian": 0.5,
-    "Some other race": 1.8,
-    "Two or more": 1.2
+    "Geographical_Area": "Congressional District 5 (109th Congress)",
+    "White_Percent": 95.5,
+    "Black_Percent": 1,
+    "Asian_Percent": 0.5,
+    "Other_Percent": 1.8,
+    "Two_More_Percent": 1.2
   },
   {
-    "Geography": "Congressional District 6 (109th Congress), Ohio",
-    "White": 96,
-    "African American": 1.7,
-    "Asian": 0.7,
-    "Some other race": 0.5,
-    "Two or more": 1.1
+    "Geographical_Area": "Congressional District 6 (109th Congress)",
+    "White_Percent": 96,
+    "Black_Percent": 1.7,
+    "Asian_Percent": 0.7,
+    "Other_Percent": 0.5,
+    "Two_More_Percent": 1.1
   },
   {
-    "Geography": "Congressional District 7 (109th Congress), Ohio",
-    "White": 88.4,
-    "African American": 7.7,
-    "Asian": 1.1,
-    "Some other race": 0.7,
-    "Two or more": 2.1
+    "Geographical_Area": "Congressional District 7 (109th Congress)",
+    "White_Percent": 88.4,
+    "Black_Percent": 7.7,
+    "Asian_Percent": 1.1,
+    "Other_Percent": 0.7,
+    "Two_More_Percent": 2.1
   },
   {
-    "Geography": "Congressional District 8 (109th Congress), Ohio",
-    "White": 91.1,
-    "African American": 5,
-    "Asian": 1.5,
-    "Some other race": 1,
-    "Two or more": 1.4
+    "Geographical_Area": "Congressional District 8 (109th Congress)",
+    "White_Percent": 91.1,
+    "Black_Percent": 5,
+    "Asian_Percent": 1.5,
+    "Other_Percent": 1,
+    "Two_More_Percent": 1.4
   },
   {
-    "Geography": "Congressional District 9 (109th Congress), Ohio",
-    "White": 80.3,
-    "African American": 14,
-    "Asian": 1.1,
-    "Some other race": 2.5,
-    "Two or more": 2.1
+    "Geographical_Area": "Congressional District 9 (109th Congress)",
+    "White_Percent": 80.3,
+    "Black_Percent": 14,
+    "Asian_Percent": 1.1,
+    "Other_Percent": 2.5,
+    "Two_More_Percent": 2.1
   },
   {
-    "Geography": "Congressional District 10 (109th Congress), Ohio",
-    "White": 85.8,
-    "African American": 7.8,
-    "Asian": 1.7,
-    "Some other race": 3.1,
-    "Two or more": 1.6
+    "Geographical_Area": "Congressional District 10 (109th Congress)",
+    "White_Percent": 85.8,
+    "Black_Percent": 7.8,
+    "Asian_Percent": 1.7,
+    "Other_Percent": 3.1,
+    "Two_More_Percent": 1.6
   },
   {
-    "Geography": "Congressional District 11 (109th Congress), Ohio",
-    "White": 36.7,
-    "African American": 58.6,
-    "Asian": 2.3,
-    "Some other race": 1.2,
-    "Two or more": 1.2
+    "Geographical_Area": "Congressional District 11 (109th Congress)",
+    "White_Percent": 36.7,
+    "Black_Percent": 58.6,
+    "Asian_Percent": 2.3,
+    "Other_Percent": 1.2,
+    "Two_More_Percent": 1.2
   },
   {
-    "Geography": "Congressional District 12 (109th Congress), Ohio",
-    "White": 72.1,
-    "African American": 21.6,
-    "Asian": 3.3,
-    "Some other race": 1.2,
-    "Two or more": 1.8
+    "Geographical_Area": "Congressional District 12 (109th Congress)",
+    "White_Percent": 72.1,
+    "Black_Percent": 21.6,
+    "Asian_Percent": 3.3,
+    "Other_Percent": 1.2,
+    "Two_More_Percent": 1.8
   },
   {
-    "Geography": "Congressional District 13 (109th Congress), Ohio",
-    "White": 82.8,
-    "African American": 11.9,
-    "Asian": 1.6,
-    "Some other race": 2,
-    "Two or more": 1.7
+    "Geographical_Area": "Congressional District 13 (109th Congress)",
+    "White_Percent": 82.8,
+    "Black_Percent": 11.9,
+    "Asian_Percent": 1.6,
+    "Other_Percent": 2,
+    "Two_More_Percent": 1.7
   },
   {
-    "Geography": "Congressional District 14 (109th Congress), Ohio",
-    "White": 93.3,
-    "African American": 3.3,
-    "Asian": 1.3,
-    "Some other race": 0.9,
-    "Two or more": 1.2
+    "Geographical_Area": "Congressional District 14 (109th Congress)",
+    "White_Percent": 93.3,
+    "Black_Percent": 3.3,
+    "Asian_Percent": 1.3,
+    "Other_Percent": 0.9,
+    "Two_More_Percent": 1.2
   },
   {
-    "Geography": "Congressional District 15 (109th Congress), Ohio",
-    "White": 83.9,
-    "African American": 8.8,
-    "Asian": 3.7,
-    "Some other race": 1.7,
-    "Two or more": 1.9
+    "Geographical_Area": "Congressional District 15 (109th Congress)",
+    "White_Percent": 83.9,
+    "Black_Percent": 8.8,
+    "Asian_Percent": 3.7,
+    "Other_Percent": 1.7,
+    "Two_More_Percent": 1.9
   },
   {
-    "Geography": "Congressional District 16 (109th Congress), Ohio",
-    "White": 92.7,
-    "African American": 4.6,
-    "Asian": 0.5,
-    "Some other race": 0.7,
-    "Two or more": 1.5
+    "Geographical_Area": "Congressional District 16 (109th Congress)",
+    "White_Percent": 92.7,
+    "Black_Percent": 4.6,
+    "Asian_Percent": 0.5,
+    "Other_Percent": 0.7,
+    "Two_More_Percent": 1.5
   },
   {
-    "Geography": "Congressional District 17 (109th Congress), Ohio",
-    "White": 85.7,
-    "African American": 11.5,
-    "Asian": 1,
-    "Some other race": 0.7,
-    "Two or more": 1.1
+    "Geographical_Area": "Congressional District 17 (109th Congress)",
+    "White_Percent": 85.7,
+    "Black_Percent": 11.5,
+    "Asian_Percent": 1,
+    "Other_Percent": 0.7,
+    "Two_More_Percent": 1.1
   },
   {
-    "Geography": "Congressional District 18 (109th Congress), Ohio",
-    "White": 96.5,
-    "African American": 1.7,
-    "Asian": 0.3,
-    "Some other race": 0.5,
-    "Two or more": 1
+    "Geographical_Area": "Congressional District 18 (109th Congress)",
+    "White_Percent": 96.5,
+    "Black_Percent": 1.7,
+    "Asian_Percent": 0.3,
+    "Other_Percent": 0.5,
+    "Two_More_Percent": 1
   }
 ];

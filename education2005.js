@@ -1,92 +1,92 @@
 var education2005 = [
   {
-    "Region": "Congressional District 1 (109th Congress), Ohio",
-    "High_School": 88.5,
-    "Bachelors": 7.6
+    "Geographical_Area": "Congressional District 1 (109th Congress)",
+    "high_school": 88.5,
+    "bachelors": 7.6
   },
   {
-    "Region": "Congressional District 2 (109th Congress), Ohio",
-    "High_School": 90.3,
-    "Bachelors": 11.3
+    "Geographical_Area": "Congressional District 2 (109th Congress)",
+    "high_school": 90.3,
+    "bachelors": 11.3
   },
   {
-    "Region": "Congressional District 3 (109th Congress), Ohio",
-    "High_School": 90.9,
-    "Bachelors": 10.7
+    "Geographical_Area": "Congressional District 3 (109th Congress)",
+    "high_school": 90.9,
+    "bachelors": 10.7
   },
   {
-    "Region": "Congressional District 4 (109th Congress), Ohio",
-    "High_School": 88.6,
-    "Bachelors": 5.8
+    "Geographical_Area": "Congressional District 4 (109th Congress)",
+    "high_school": 88.6,
+    "bachelors": 5.8
   },
   {
-    "Region": "Congressional District 5 (109th Congress), Ohio",
-    "High_School": 89.5,
-    "Bachelors": 7.8
+    "Geographical_Area": "Congressional District 5 (109th Congress)",
+    "high_school": 89.5,
+    "bachelors": 7.8
   },
   {
-    "Region": "Congressional District 6 (109th Congress), Ohio",
-    "High_School": 87.7,
-    "Bachelors": 7.3
+    "Geographical_Area": "Congressional District 6 (109th Congress)",
+    "high_school": 87.7,
+    "bachelors": 7.3
   },
   {
-    "Region": "Congressional District 7 (109th Congress), Ohio",
-    "High_School": 91.2,
-    "Bachelors": 6.3
+    "Geographical_Area": "Congressional District 7 (109th Congress)",
+    "high_school": 91.2,
+    "bachelors": 6.3
   },
   {
-    "Region": "Congressional District 8 (109th Congress), Ohio",
-    "High_School": 88,
-    "Bachelors": 6.3
+    "Geographical_Area": "Congressional District 8 (109th Congress)",
+    "high_school": 88,
+    "bachelors": 6.3
   },
   {
-    "Region": "Congressional District 9 (109th Congress), Ohio",
-    "High_School": 90.5,
-    "Bachelors": 10.8
+    "Geographical_Area": "Congressional District 9 (109th Congress)",
+    "high_school": 90.5,
+    "bachelors": 10.8
   },
   {
-    "Region": "Congressional District 10 (109th Congress), Ohio",
-    "High_School": 90.6,
-    "Bachelors": 10
+    "Geographical_Area": "Congressional District 10 (109th Congress)",
+    "high_school": 90.6,
+    "bachelors": 10
   },
   {
-    "Region": "Congressional District 11 (109th Congress), Ohio",
-    "High_School": 87,
-    "Bachelors": 11.8
+    "Geographical_Area": "Congressional District 11 (109th Congress)",
+    "high_school": 87,
+    "bachelors": 11.8
   },
   {
-    "Region": "Congressional District 12 (109th Congress), Ohio",
-    "High_School": 91.2,
-    "Bachelors": 13
+    "Geographical_Area": "Congressional District 12 (109th Congress)",
+    "high_school": 91.2,
+    "bachelors": 13
   },
   {
-    "Region": "Congressional District 13 (109th Congress), Ohio",
-    "High_School": 92.8,
-    "Bachelors": 9.6
+    "Geographical_Area": "Congressional District 13 (109th Congress)",
+    "high_school": 92.8,
+    "bachelors": 9.6
   },
   {
-    "Region": "Congressional District 14 (109th Congress), Ohio",
-    "High_School": 88.9,
-    "Bachelors": 10.3
+    "Geographical_Area": "Congressional District 14 (109th Congress)",
+    "high_school": 88.9,
+    "bachelors": 10.3
   },
   {
-    "Region": "Congressional District 15 (109th Congress), Ohio",
-    "High_School": 90.4,
-    "Bachelors": 15.3
+    "Geographical_Area": "Congressional District 15 (109th Congress)",
+    "high_school": 90.4,
+    "bachelors": 15.3
   },
   {
-    "Region": "Congressional District 16 (109th Congress), Ohio",
-    "High_School": 92.1,
-    "Bachelors": 7.5
+    "Geographical_Area": "Congressional District 16 (109th Congress)",
+    "high_school": 92.1,
+    "bachelors": 7.5
   },
   {
-    "Region": "Congressional District 17 (109th Congress), Ohio",
-    "High_School": 90.7,
-    "Bachelors": 7.3
+    "Geographical_Area": "Congressional District 17 (109th Congress)",
+    "high_school": 90.7,
+    "bachelors": 7.3
   },
   {
-    "Region": "Congressional District 18 (109th Congress), Ohio",
-    "High_School": 82.5,
-    "Bachelors": 3.7
+    "Geographical_Area": "Congressional District 18 (109th Congress)",
+    "high_school": 82.5,
+    "bachelors": 3.7
   }
 ];
