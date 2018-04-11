@@ -1,4 +1,4 @@
-[
+var education2005 = [
   {
     "Region": "Congressional District 1 (109th Congress), Ohio",
     "High_School": 88.5,
@@ -89,4 +89,4 @@
     "High_School": 82.5,
     "Bachelors": 3.7
   }
-]
+];
