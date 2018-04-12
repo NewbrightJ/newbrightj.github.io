@@ -13,6 +13,8 @@
     <script src="jquery.min.js"></script>
     <script src="education2005.js"></script>
     <script src="education2013.js"></script>
+    <script src="Income2005.js"></script>
+    <script src="Income2013.js"></script>
     <script src="Race2005.js"></script>
     <script src="Race2013.js"></script>
 
@@ -209,9 +211,11 @@
         </div>
         <select id="Filter1">
             <option value="education">Education</option>
+            <option value="income">Income</option>
             <option value="race">Race</option>
         </select>
         <div id="EducationGraph1" style="height:400px;width:400px;margin: 0 auto;"></div>
+        <div id="IncomeGraph1" style="height:400px;display: none"></div>
         <div id="RaceGraph1" style="height:400px;display: none"></div>
     </div>
     <div style="width:50%;float: right;">
@@ -220,15 +224,17 @@
         </div>
         <select id="Filter2">
             <option value="education">Education</option>
+            <option value="income">Income</option>
             <option value="race">Race</option>
         </select>
         <div id="EducationGraph2" style="height:400px;width:400px;margin: 0 auto;"></div>
+        <div id="IncomeGraph2" style="height:400px;display: none"></div>
         <div id="RaceGraph2" style="height:400px;display: none"></div>
     </div>
 
     <script>
         // Initially make Education Graph 1 using District 1
-        var trace1 = {
+        var edu1 = {
             x: ['High School', 'Bachelor\'s Degree'],
             y: [education2005[0].high_school, education2005[0].bachelors],
             type: 'bar',
@@ -237,7 +243,7 @@
             }
         }
 
-        var data = [trace1];
+        var data = [edu1];
 
         var layout = {
             title: education2005[0].Geographical_Area,
@@ -247,10 +253,10 @@
 
         Plotly.newPlot('EducationGraph1', data, layout, { displayModeBar: false });
 
-        // Initially make Race Graph 1 using District 1 
-        var trace2 = {
-            labels: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
-            values: [race2005[0].White_Percent, race2005[0].Black_Percent, race2005[0].Asian_Percent, race2005[0].Two_More_Percent, race2005[0].Other_Percent],
+        // Initially make Income Graph 1 using District 1
+        var income1 = {
+            labels: ['Less than $10,000', '$10,000 to $14,999', '$15,000 to $24,999', '$25,000 to $34,999', '$35,000 to $49,999', '$50,000 to $74,999', '$75,000 to $99,999', '$100,000 to $149,999', '$150,000 to $199,999', '$200,000 or more'],
+            values: [income2005[0].less10k, income2005[0].Income10kto15k, income2005[0].Income15kto25k, income2005[0].Income25kto35k, income2005[0].Income35kto50k, income2005[0].Income50kto75k, income2005[0].Income75kto100k, income2005[0].Income100kto150k, income2005[0].Income150kto200k, income2005[0].more200k],
             type: 'pie',
             marker: {
                 color: ['rgba(80, 185, 41, 1)', 'rgba(246,150,54,1)']
@@ -259,17 +265,38 @@
             rotation: 90
         }
 
-        var data = [trace2];
+        var data = [income1];
+
+        var layout = {
+            title: income2005[0].Geographical_Area,
+            showlegend: true
+        };
+
+        Plotly.newPlot('IncomeGraph1', data, layout, { displayModeBar: false });
+
+        // Initially make Race Graph 1 using District 1 
+        var race1 = {
+            labels: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
+            values: [race2005[0].White_Percent, race2005[0].Black_Percent, race2005[0].Asian_Percent, race2005[0].Two_More_Percent, race2005[0].Other_Percent],
+            type: 'pie',
+            marker: {
+                color: ['rgba(80, 185, 41, 1)', 'rgba(246,150,54,1)']
+            },
+            hoverinfo: 'label+percent',
+            rotation: 90,
+        }
+
+        var data = [race1];
 
         var layout = {
             title: race2005[0].Geographical_Area,
-            showlegend: true
+            showlegend: true,
         };
 
         Plotly.newPlot('RaceGraph1', data, layout, { displayModeBar: false });
 
         // Initially make Education Graph 2 using District 1
-        var trace3 = {
+        var edu2 = {
             x: ['High School', 'Bachelor\'s Degree'],
             y: [education2013[0].high_school, education2013[0].bachelors],
             type: 'bar',
@@ -278,7 +305,7 @@
             }
         }
 
-        var data = [trace3];
+        var data = [edu2];
 
         var layout = {
             title: education2013[0].Geographical_Area,
@@ -288,8 +315,29 @@
 
         Plotly.newPlot('EducationGraph2', data, layout, { displayModeBar: false });
 
+        // Initially make Income Graph 2 using District 1
+        var income2 = {
+            labels: ['Less than $10,000', '$10,000 to $14,999', '$15,000 to $24,999', '$25,000 to $34,999', '$35,000 to $49,999', '$50,000 to $74,999', '$75,000 to $99,999', '$100,000 to $149,999', '$150,000 to $199,999', '$200,000 or more'],
+            values: [income2013[0].less10k, income2013[0].Income10kto15k, income2013[0].Income15kto25k, income2013[0].Income25kto35k, income2013[0].Income35kto50k, income2013[0].Income50kto75k, income2013[0].Income75kto100k, income2013[0].Income100kto150k, income2013[0].Income150kto200k, income2013[0].more200k],
+            type: 'pie',
+            marker: {
+                color: ['rgba(80, 185, 41, 1)', 'rgba(246,150,54,1)']
+            },
+            hoverinfo: 'label+percent',
+            rotation: 90
+        }
+
+        var data = [income2];
+
+        var layout = {
+            title: income2013[0].Geographical_Area,
+            showlegend: true
+        };
+
+        Plotly.newPlot('IncomeGraph2', data, layout, { displayModeBar: false });
+
         // Initially make Race Graph 2 using District 1 
-        var trace4 = {
+        var race2 = {
             labels: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
             values: [race2013[0].White_Percent, race2013[0].Black_Percent, race2013[0].Asian_Percent, race2013[0].Two_More_Percent, race2013[0].Other_Percent],
             type: 'pie',
@@ -300,7 +348,7 @@
             rotation: 90
         }
 
-        var data = [trace4];
+        var data = [race2];
 
         var layout = {
             title: race2013[0].Geographical_Area,
@@ -320,7 +368,7 @@
                 // If left map is clicked
                 if ($(this).attr('svgtext') == '1') {
                     // Redraw Education graph 1
-                    var trace1 = {
+                    var edu1 = {
                         x: ['High School', 'Bachelor\'s Degree'],
                         y: [education2005[$(this).attr('id')].high_school, education2005[$(this).attr('id')].bachelors],
                         type: 'bar',
@@ -329,7 +377,7 @@
                         }
                     }
 
-                    var data = [trace1];
+                    var data = [edu1];
 
                     var layout = {
                         title: education2005[$(this).attr('id')].Geographical_Area,
@@ -339,8 +387,29 @@
 
                     Plotly.newPlot('EducationGraph1', data, layout, { displayModeBar: false });
 
+                    // Redraw Income graph 1
+                    var income1 = {
+                        labels: ['Less than $10,000', '$10,000 to $14,999', '$15,000 to $24,999', '$25,000 to $34,999', '$35,000 to $49,999', '$50,000 to $74,999', '$75,000 to $99,999', '$100,000 to $149,999', '$150,000 to $199,999', '$200,000 or more'],
+                        values: [income2005[$(this).attr('id')].less10k, income2005[$(this).attr('id')].Income10kto15k, income2005[$(this).attr('id')].Income15kto25k, income2005[$(this).attr('id')].Income25kto35k, income2005[$(this).attr('id')].Income35kto50k, income2005[$(this).attr('id')].Income50kto75k, income2005[$(this).attr('id')].Income75kto100k, income2005[$(this).attr('id')].Income100kto150k, income2005[$(this).attr('id')].Income150kto200k, income2005[$(this).attr('id')].more200k],
+                        type: 'pie',
+                        marker: {
+                            color: ['rgba(80, 185, 41, 1)', 'rgba(246,150,54,1)']
+                        },
+                        hoverinfo: 'label+percent',
+                        rotation: 90
+                    }
+
+                    var data = [income1];
+
+                    var layout = {
+                        title: income2005[$(this).attr('id')].Geographical_Area,
+                        showlegend: true
+                    };
+
+                    Plotly.newPlot('IncomeGraph1', data, layout, { displayModeBar: false });
+
                     // Redraw Race graph 1
-                    var trace2 = {
+                    var race1 = {
                         labels: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
                         values: [race2005[$(this).attr('id')].White_Percent, race2005[$(this).attr('id')].Black_Percent, race2005[$(this).attr('id')].Asian_Percent, race2005[$(this).attr('id')].Two_More_Percent, race2005[$(this).attr('id')].Other_Percent],
                         type: 'pie',
@@ -351,7 +420,7 @@
                         rotation: 90
                     }
 
-                    var data = [trace2];
+                    var data = [race1];
 
                     var layout = {
                         title: race2005[$(this).attr('id')].Geographical_Area,
@@ -363,7 +432,7 @@
                 // If right map is clicked 
                 if ($(this).attr('svgtext') == '2') {
                     // Redraw Education graph 2
-                    var trace3 = {
+                    var edu2 = {
                         x: ['High School', 'Bachelor\'s Degree'],
                         y: [education2013[$(this).attr('id')].high_school, education2013[$(this).attr('id')].bachelors],
                         type: 'bar',
@@ -372,7 +441,7 @@
                         }
                     }
 
-                    var data = [trace3];
+                    var data = [edu2];
 
                     var layout = {
                         title: education2013[$(this).attr('id')].Geographical_Area,
@@ -382,8 +451,29 @@
 
                     Plotly.newPlot('EducationGraph2', data, layout, { displayModeBar: false });
 
+                    // Redraw Income graph 2
+                    var income2 = {
+                        labels: ['Less than $10,000', '$10,000 to $14,999', '$15,000 to $24,999', '$25,000 to $34,999', '$35,000 to $49,999', '$50,000 to $74,999', '$75,000 to $99,999', '$100,000 to $149,999', '$150,000 to $199,999', '$200,000 or more'],
+                        values: [income2013[$(this).attr('id')].less10k, income2013[$(this).attr('id')].Income10kto15k, income2013[$(this).attr('id')].Income15kto25k, income2013[$(this).attr('id')].Income25kto35k, income2013[$(this).attr('id')].Income35kto50k, income2013[$(this).attr('id')].Income50kto75k, income2013[$(this).attr('id')].Income75kto100k, income2013[$(this).attr('id')].Income100kto150k, income2013[$(this).attr('id')].Income150kto200k, income2013[$(this).attr('id')].more200k],
+                        type: 'pie',
+                        marker: {
+                            color: ['rgba(80, 185, 41, 1)', 'rgba(246,150,54,1)']
+                        },
+                        hoverinfo: 'label+percent',
+                        rotation: 90
+                    }
+
+                    var data = [income2];
+
+                    var layout = {
+                        title: income2013[$(this).attr('id')].Geographical_Area,
+                        showlegend: true
+                    };
+
+                    Plotly.newPlot('IncomeGraph2', data, layout, { displayModeBar: false });
+
                     // Redraw Race graph 2
-                    var trace4 = {
+                    var race2 = {
                         labels: ['White', 'Black', 'Asian', 'Two or More Races', 'Some Other Race'],
                         values: [race2013[$(this).attr('id')].White_Percent, race2013[$(this).attr('id')].Black_Percent, race2013[$(this).attr('id')].Asian_Percent, race2013[$(this).attr('id')].Two_More_Percent, race2013[$(this).attr('id')].Other_Percent],
                         type: 'pie',
@@ -394,7 +484,7 @@
                         rotation: 90
                     }
 
-                    var data = [trace4];
+                    var data = [race2];
 
                     var layout = {
                         title: race2013[$(this).attr('id')].Geographical_Area,
@@ -408,14 +498,22 @@
                 //console.log($(this).attr('svgtext'));
             });
 
+            // Will trigger when the value of the dropdown changes
+            // The active graph will show and the other will be hidden. 
             $('#Filter1').change(function () {
                 var Filter1 = $(this).val();
                 if (Filter1 == 'race') {
+                    $('#IncomeGraph1').hide();
                     $('#EducationGraph1').hide();
                     $('#RaceGraph1').show();
-                } else {
-                    $('#EducationGraph1').show();
+                } else if(Filter1 == 'income'){
+                    $('#EducationGraph1').hide();
                     $('#RaceGraph1').hide();
+                    $('#IncomeGraph1').show();
+                } else {
+                    $('#RaceGraph1').hide();
+                    $('#IncomeGraph1').hide();
+                    $('#EducationGraph1').show();
                 }
             });
 
@@ -424,11 +522,17 @@
             $('#Filter2').change(function () {
                 var Filter2 = $(this).val();
                 if (Filter2 == 'race') {
+                    $('#IncomeGraph2').hide();
                     $('#EducationGraph2').hide();
                     $('#RaceGraph2').show();
-                } else {
-                    $('#EducationGraph2').show();
+                } else if(Filter2 == 'income'){
+                    $('#EducationGraph2').hide();
                     $('#RaceGraph2').hide();
+                    $('#IncomeGraph2').show();
+                } else {
+                    $('#IncomeGraph2').hide();
+                    $('#RaceGraph2').hide();
+                    $('#EducationGraph2').show();
                 }
             });
 
