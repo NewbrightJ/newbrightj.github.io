@@ -1,4 +1,4 @@
-[
+var income2005 = [
   {
     "region": "Congressional District 1 (109th Congress), Ohio",
     "Less than $10,000": 12.7,
@@ -233,4 +233,4 @@
     "$150,000 to $199,999": 1.3,
     "$200,000 or more": 0.7
   }
-]
+];
