@@ -1,4 +1,4 @@
-[
+var income2013 = [
   {
     "Region": "Congressional District 1 (113th Congress), Ohio",
     "Less than $10,000": 9.5,
@@ -207,4 +207,4 @@
     "$150,000 to $199,999": 4.8,
     "$200,000 or more": 3.7
   }
-]
+];
