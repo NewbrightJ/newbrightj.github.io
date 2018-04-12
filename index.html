@@ -367,6 +367,13 @@
             $('path').click(function () {
                 // If left map is clicked
                 if ($(this).attr('svgtext') == '1') {
+                    // Possibly add solid border around active district
+                    /*var pathID = $(this).attr('id');
+                    var activePath = $("path[id="+pathID+"][svgtext='1']");
+                    var $paths = $("path[svgtext='1']");
+                    $paths.removeClass("active");
+                    $(activePath).addClass( "active" ); */
+
                     // Redraw Education graph 1
                     var edu1 = {
                         x: ['High School', 'Bachelor\'s Degree'],
