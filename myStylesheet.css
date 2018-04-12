@@ -72,3 +72,14 @@
 .hover {
     opacity: 0.5;
 }
+
+.info-block {
+    position: absolute;
+    top: 530px;
+    right: 25px;
+    background-color: white;
+    color: black;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+}
