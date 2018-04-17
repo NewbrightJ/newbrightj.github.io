@@ -53,8 +53,8 @@
 
 .Dem {
     stroke: black;
-    stroke-width: .08%;
-    fill: #0000ff;
+    stroke-width: .08%;    
+    fill: url(#RadialGradient2);
     stroke-linecap:butt;
     stroke-miterlimit:2;
     stroke-linejoin:round;
@@ -63,7 +63,7 @@
 .Rep {
     stroke: black;
     stroke-width: .08%;
-    fill: #ff0000;
+    fill: url(#RadialGradient1);
     stroke-linecap:butt;
     stroke-miterlimit:2;
     stroke-linejoin:round;
