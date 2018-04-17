@@ -208,11 +208,9 @@
         <div>
             <strong>Select a filter:</strong>
         </div>
-        <form>
-            <input type="radio" name="filter" value="income" checked> Income<br>
-            <input type="radio" name="filter" value="race" > Race<br>
-            <input type="radio" name="filter" value="education" > Education<br>
-        </form>
+        <input class="Filter1" type="radio" name="Filter1" value="education" checked> Education<br>
+        <input class="Filter1" type="radio" name="Filter1" value="income"> Income<br>
+        <input class="Filter1" type="radio" name="Filter1" value="race"> Race<br>
         <!--
         <select id="Filter1">
             <option value="education">Education</option>
@@ -228,11 +226,15 @@
         <div>
             <strong>Select a filter:</strong>
         </div>
+        <input class="Filter2" type="radio" name="Filter2" value="education" checked> Education<br>
+        <input class="Filter2" type="radio" name="Filter2" value="income"> Income<br>
+        <input class="Filter2" type="radio" name="Filter2" value="race"> Race<br>
+        <!--
         <select id="Filter2">
             <option value="education">Education</option>
             <option value="income">Income</option>
             <option value="race">Race</option>
-        </select>
+        </select> -->
         <div id="EducationGraph2" style="height:400px;width:400px;margin: 0 auto;"></div>
         <div id="IncomeGraph2" style="height:400px;display: none"></div>
         <div id="RaceGraph2" style="height:400px;display: none"></div>
@@ -526,8 +528,9 @@
 
             // Will trigger when the value of the dropdown changes
             // The active graph will show and the other will be hidden. 
-            $('#Filter1').change(function () {
-                var Filter1 = $(this).val();
+            $('.Filter1').click(function () {
+                console.log("Hello");
+                var Filter1 = $('input[name=Filter1]:checked').val(); 
                 if (Filter1 == 'race') {
                     $('#IncomeGraph1').hide();
                     $('#EducationGraph1').hide();
@@ -545,7 +548,7 @@
 
             // Will trigger when the value of the dropdown changes
             // The active graph will show and the other will be hidden. 
-            $('#Filter2').change(function () {
+            $('.Filter2').click(function () {
                 var Filter2 = $(this).val();
                 if (Filter2 == 'race') {
                     $('#IncomeGraph2').hide();
