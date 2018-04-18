@@ -255,6 +255,8 @@
             <br>Sources:
             <a href="https://plot.ly/javascript/">plot.ly,</a>
             <a href="https://jquery.com/">jquery</a>
+            <br>Data from:
+            <a href="https://factfinder.census.gov">factfinder.census.gov</a>
             <br>
             <a href="https://geography.osu.edu/" style="float: left;">
               <img src="OSUlogo.jpg" alt="OSU" height=10% width=10%>
@@ -398,12 +400,12 @@
             $('path').click(function () {
                 // If left map is clicked
                 if ($(this).attr('svgtext') == '1') {
-                    // Possibly add solid border around active district
-                    /*var pathID = $(this).attr('id');
+                    // Add solid white border around active district
+                    var pathID = $(this).attr('id');
                     var activePath = $("path[id="+pathID+"][svgtext='1']");
                     var $paths = $("path[svgtext='1']");
                     $paths.removeClass("active");
-                    $(activePath).addClass( "active" ); */
+                    $(activePath).addClass( "active" );
 
                     // Redraw Education graph 1
                     var edu1 = {
@@ -469,6 +471,13 @@
                 }
                 // If right map is clicked 
                 if ($(this).attr('svgtext') == '2') {
+                    // Add solid white border around active district
+                    var pathID = $(this).attr('id');
+                    var activePath = $("path[id="+pathID+"][svgtext='2']");
+                    var $paths = $("path[svgtext='2']");
+                    $paths.removeClass("active");
+                    $(activePath).addClass( "active" );
+
                     // Redraw Education graph 2
                     var edu2 = {
                         x: ['High School', 'Bachelor\'s Degree'],
