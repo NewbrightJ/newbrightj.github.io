@@ -3,16 +3,6 @@
     background-color: rgb(184, 184, 184);
 }
 
-#mapid {
-    height: 500px;
-    width: 440px
-}
-
-#wrapper {
-    height: 60px;
-    width: 100%;
-}
-
 #titleLeft {
     text-align: center;
     font-variant: small-caps;
@@ -35,6 +25,42 @@
     height: 60px;
     line-height: 60px;
     overflow: hidden;
+}
+
+#mapid {
+    height: 500px;
+    width: 440px;
+}
+
+#mapContainer {
+    height: 550px;
+    width: 100%;
+}
+#map1 {
+    height:400px;
+    width:50%;
+    float: left;
+}
+
+#map2 {
+    height:400px;
+    width:50%;
+    float: right;
+}
+
+#dropDownLeft {
+    width:50%;
+    float: left;
+}
+
+#dropDownRight {
+    width:50%;
+    float: right;
+}
+
+#wrapper {
+    height: 60px;
+    width: 100%;
 }
 
 .headerText {

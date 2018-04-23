@@ -7,6 +7,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="myStylesheet.css" />
     <!-- Scripts -->
+    <script src="mapCode.js"></script>
     <script src="plotly-latest.min.js"></script>
     <script src="jquery.min.js"></script>
     <!-- Data -->
@@ -38,9 +39,9 @@
     <!-- Container for both maps -->
 
     
-    <div id="mapContainer" style="height:550px;width:100%">
+    <div id="mapContainer">
 
-        <div id="mapid1" style="height:400px;width:50%;float:left">
+        <div id="map1">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="38.0 -84.475 6.0 5.0" version="1.1">
                 <defs>
                     <radialGradient id="RadialGradient1" x1="0%" y1="0%" x2="100%" y2="50%">
@@ -137,7 +138,7 @@
             </svg>
         </div>
 
-        <div id="mapid2" style="height:400px;width:50%;float:right">
+        <div id="map2">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="38.0 -84.475 6.0 5.0" version="1.1">
                 <g id="viewport" transform="matrix(1 0 0 1 0 0)">
                     <g id="map-matrix" transform="rotate(-90,40.553935,-83.0329985)">
@@ -219,7 +220,7 @@
     </div>
 
     <!-- Container for filter dropdowns and graphs -->
-    <div style="width:50%;float: left;">
+    <div id="dropDownLeft">
         <div>
             <strong>Select a filter:</strong>
         </div>
@@ -237,7 +238,7 @@
         <div id="IncomeGraph1" style="height:400px;display: none"></div>
         <div id="RaceGraph1" style="height:400px;display: none"></div>
     </div>
-    <div style="width:50%;float: right;">
+    <div id="dropDownRight">
         <div>
             <strong>Select a filter:</strong>
         </div>
